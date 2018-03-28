@@ -9,15 +9,15 @@
         <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Icon Google Library -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <title>Locations Map View</title>
+        <title><?= $lang['location_map_view_page_titel']; ?></title>
         <link href="resources/css/map_style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="container">
             <!-- Menu -->
-            <?php include 'app/menu.html'; ?>
+            <?php include 'app/menu.php'; ?>
             <div class="py-5 text-center">
-                <h2>Locations Map</h2>
+                <h2><?= $lang['location_map_view_page_title']; ?></h2>
                 <a href="location_add.php" role="button" class="btn btn-primary float-right" data-toggle="tooltip" data-placement="top" title="Add Location"><i class="material-icons">add</i></a>
             </div>
             <?php $printXML = true;  $locations_list = selectLocations(false, $printXML); //Generate XML File with DB Locations list ?>
@@ -26,7 +26,7 @@
             </div>
         </div>
         <!-- Footer -->
-        <?php include 'app/footer.html'; ?>
+        <?php include 'app/footer.php'; ?>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="resources/js/jquery-3.3.1.min.js" type="text/javascript"></script>

@@ -67,7 +67,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Missing Features
 
 - Choice of which categories to display
-- Create a Languaje Configuration File 
 - Relocation of Locations through Google Map.
 - Optimize Add/Edit/Delete Modes though a Class or More Functions.
 - Utilize a Templating Scheeme such as Laravel.

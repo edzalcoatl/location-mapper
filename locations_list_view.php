@@ -10,24 +10,24 @@
         <!-- Icon Google Library -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="resources/css/map_style.css" rel="stylesheet" type="text/css"/>
-        <title>Locations List View</title>
+        <title><?= $lang['location_list_page_title'] ?></title>
     </head>
     <body>
         <div class="container">
             <!-- Menu -->
-            <?php include 'app/menu.html'; ?>
+            <?php include 'app/menu.php'; ?>
             <div class="py-5 text-center">
-                <h2>Locations</h2>
-                <a href="location_add.php" role="button" class="btn btn-primary float-right" data-toggle="tooltip" data-placement="top" title="Add Location"><i class="material-icons">add</i></a>
+                <h2><?= $lang['location_list_page_title'] ?></h2>
+                <a href="location_add.php" role="button" class="btn btn-primary float-right" data-toggle="tooltip" data-placement="top" title="<?= $lang['add'] ?>"><i class="material-icons">add</i></a>
             </div>
             <?php 
             if($_REQUEST['error']==1) {
-                echo '<div class="alert alert-danger" role="alert">There was an error processing the delete mode.</div>';
+                echo '<div class="alert alert-danger" role="alert">'. $lang['record_error'].'</div>';
                 die();
             }
-            if($_REQUEST['delete']==1) echo '<div class="alert alert-success" role="alert">Record Deleted Succesfully!</div>'; 
-            if($_REQUEST['update']==1) echo '<div class="alert alert-success" role="alert">Record Updated Succesfully!</div>'; 
-            if($_REQUEST['insert']==1) echo '<div class="alert alert-success" role="alert">Record Inserted Succesfully!</div>'; 
+            if($_REQUEST['delete']==1) echo '<div class="alert alert-success" role="alert">'. $lang['recod_deleted']. '</div>'; 
+            if($_REQUEST['update']==1) echo '<div class="alert alert-success" role="alert">'. $lang['recod_updated']. '</div>'; 
+            if($_REQUEST['insert']==1) echo '<div class="alert alert-success" role="alert">'. $lang['recod_inserted']. '</div>'; 
             if($_REQUEST['delete'] || $_REQUEST['update'] || $_REQUEST['insert']) echo "<META http-equiv=\"refresh\" content=\"1;URL=locations_list_view.php\">";
             ?>
             <?php $locations_list = selectLocations(); //Get locations array?>
@@ -37,9 +37,9 @@
                 <div class="card border-secondary " style="max-width: 18rem; margin-left: 10px; margin-top: 30px;">
                     <div class="card-header"><?= $locations_list[$key]['locationCategory']; ?>
                         <div class="btn-group float-right" role="group" aria-label="Basic example">
-                            <span data-toggle="modal" data-target="#exampleModal"><a id="LoadMapLink" href="#" role="button" class="btn btn-dark btn-sm"  onClick="initMap(<?= $locations_list[$key]['locationLatitude']; ?>, <?= $locations_list[$key]['locationLongitude']; ?>, '<?= $locations_list[$key]['locationName']; ?>', '<?= $locations_list[$key]['locationCategoryColor']; ?>')" data-toggle="tooltip" data-placement="top" title="View Location"><i class="material-icons md-light">pageview</i></a></span>
-                            <span><a href="location_update.php?rid=<?= $key; ?>&mode=update" role="button" class="btn btn-dark btn-sm" data-toggle="tooltip" data-placement="top" title="Edit Location"><i class="material-icons md-light">mode_edit</i></a></span>
-                            <span><a href="location_validate.php?rid=<?= $key; ?>&mode=delete" role="button" class="btn btn-dark btn-sm" data-toggle="tooltip" data-placement="top" title="Delete Location"><i class="material-icons md-light">delete_forever</i></a></span>
+                            <span data-toggle="modal" data-target="#exampleModal"><a id="LoadMapLink" href="#" role="button" class="btn btn-dark btn-sm"  onClick="initMap(<?= $locations_list[$key]['locationLatitude']; ?>, <?= $locations_list[$key]['locationLongitude']; ?>, '<?= $locations_list[$key]['locationName']; ?>', '<?= $locations_list[$key]['locationCategoryColor']; ?>')" data-toggle="tooltip" data-placement="top" title="<?= $lang['view'] ?>"><i class="material-icons md-light">pageview</i></a></span>
+                            <span><a href="location_update.php?rid=<?= $key; ?>&mode=update" role="button" class="btn btn-dark btn-sm" data-toggle="tooltip" data-placement="top" title="<?= $lang['edit'] ?>"><i class="material-icons md-light">mode_edit</i></a></span>
+                            <span><a href="location_validate.php?rid=<?= $key; ?>&mode=delete" role="button" class="btn btn-dark btn-sm" data-toggle="tooltip" data-placement="top" title="<?= $lang['delete'] ?>"><i class="material-icons md-light">delete_forever</i></a></span>
                         </div>
                     </div>
                     <div class="card-body text-secondary">
@@ -68,7 +68,7 @@
             </div>
         </div>
         <!-- Footer -->
-        <?php include 'app/footer.html'; ?>
+        <?php include 'app/footer.php'; ?>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="resources/js/jquery-3.3.1.min.js" type="text/javascript"></script>

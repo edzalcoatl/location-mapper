@@ -8,37 +8,37 @@
     <!-- Bootstrap CSS -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="resources/css/bootstrap-colorpicker.css" rel="stylesheet" type="text/css"/>
-    <title>Locations Category Add</title>
+    <title><?= $lang['category_add_page_titel'] ?></title>
   </head>
   <body>
     <div class="container">
-      <?php include 'app/menu.html'; ?>  
+      <?php include 'app/menu.php'; ?>  
       <div class="py-5 text-center">
-        <h2>Add Category</h2>
+        <h2><?= $lang['category_add_page_titel'] ?></h2>
       </div>
 
       <div class="row justify-content-md-center">
         <div class="col-md-8">
             <form action="category_validate.php?mode=add" method="POST" class="needs-validation" novalidate>
                 <div class="mb-3">
-                    <label for="category_name">Category Name</label>
-                    <input type="text" class="form-control" name="category_name" placeholder="Category Name" required>
+                    <label for="category_name"><?= $lang['category_add_name_field'] ?></label>
+                    <input type="text" class="form-control" name="category_name" placeholder="" required>
                     <div class="invalid-feedback">
-                        Please enter a valid Category Name.
+                        <?= $lang['category_add_name_field_error_msg'] ?>
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="category_color">Category Color</label>
-                    <input type="text" style="width:auto" class="form-control" id="mycp" data-color="#6D2781" name="category_color" placeholder="Category Color" required>             
+                    <label for="category_color"><?= $lang['category_add_color_field'] ?></label>
+                    <input type="text" style="width:auto" class="form-control" id="mycp" data-color="#6D2781" name="category_color" placeholder="" required>             
                     <div class="invalid-feedback">
-                        Please enter a Color for the Category.
+                        <?= $lang['category_add_name_field_error_msg'] ?>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-lg btn-block" type="submit" value="Submit">Add Category</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit" value="Submit"><?= $lang['category_add_button'] ?></button>
             </form>
         </div>
       </div>
-      <?php include 'app/footer.html'; ?>
+      <?php include 'app/footer.php'; ?>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-      <?php include 'app/menu.html'; ?>  
+      <?php include 'app/menu.php'; ?>  
       <div class="py-5 text-center">
         <h2>Category Update</h2>
       </div>
@@ -44,7 +44,7 @@
             </form>
         </div>
       </div>
-      <?php include 'app/footer.html'; ?>
+      <?php include 'app/footer.php'; ?>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
