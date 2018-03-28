@@ -22,7 +22,8 @@
             <?php 
             foreach ($locations_list as $key => $value){ 
                 $location_name = $locations_list[$key]['locationName']; 
-                $location_category = $locations_list[$key]['locationCategoryID']; 
+                $location_category_name = $locations_list[$key]['locationCategory']; 
+                $location_category_id = $locations_list[$key]['locationCategoryID']; 
                 $location_address = $locations_list[$key]['locationAddress'];
                 $location_latitude = $locations_list[$key]['locationLatitude'];
                 $location_longitude = $locations_list[$key]['locationLongitude'];
@@ -37,6 +38,20 @@
                         Please enter a valid Location Name.
                     </div>
                 </div>
+                <div class="mb-3">
+                    <label for="Location Category">Category *</label>
+                    <select class="form-control" name="category" required>
+                        <?php $location_categories = selectLocationCategories(); ?>
+                        <option value="">Select Category</option>
+                        <option value="<?= $location_category_id ?>" selected="selected"><?= $location_category_name ?></option>
+                        <?php foreach ($location_categories as $location_id => $location_name): ?>
+                            <option value="<?= $location_id; ?>"><?= $location_name; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please enter a valid Location Category.
+                    </div>
+                </div>   
                 <div class="mb-3">
                     <label for="address">Address *</label>
                     <input type="text" class="form-control" name="address" value="<?= $location_address; ?>" required>

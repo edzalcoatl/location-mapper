@@ -67,7 +67,7 @@ if($mode == 'update'){
         if($coordinates){
             //** Mysql Insert
             include 'database/location_db.php';
-            $sql = "UPDATE locations SET locationName = '$name',  "
+            $sql = "UPDATE locations SET locationName = '$name', locationCategory='$category', "
                     . "locationAddress = '$coordinates[2]', "
                     . "locationLatitude = '$coordinates[0]', "
                     . "locationLongitude = '$coordinates[1]' "
@@ -85,7 +85,7 @@ if($mode == 'update'){
     } else {
             //** Mysql Insert
             include 'database/location_db.php';
-            $sql = "UPDATE locations SET locationName = '$name',  "
+            $sql = "UPDATE locations SET locationName = '$name', locationCategory='$category', "
                     . "locationAddress = '$address', "
                     . "locationLatitude = '$latitude', "
                     . "locationLongitude = '$longitude' "

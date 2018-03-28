@@ -6,7 +6,7 @@
 ## |   file for Google Maps API (Optional)s                                    | 
 ## +---------------------------------------------------------------------------+
 function selectLocations($rid, $createXML){
-    include_once('database/location_db.php');
+    include('database/location_db.php');
     //Search for a specific location 
     if($rid){
         $query = "SELECT locationID, (SELECT categoryName FROM location_categories WHERE categoryID = locationCategory) as locationCategory, "
@@ -22,7 +22,7 @@ function selectLocations($rid, $createXML){
     }
     mysql_query("SET NAMES 'utf8'"); 
     $result = $conn->query($query);
-    global $locations_array;
+    $locations_array;
     $locations_array = [];
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) { 
@@ -72,7 +72,7 @@ function selectLocations($rid, $createXML){
 ## | Function to select Location Categories                                    | 
 ## +---------------------------------------------------------------------------+
 function selectCategories($rid){
-    include_once('database/location_db.php');
+    include('database/location_db.php');
     if($rid){
        $query = "SELECT categoryID, categoryName, categoryColor FROM location_categories "
             . "WHERE categoryID = '$rid'"; 
@@ -101,7 +101,7 @@ function selectCategories($rid){
 ## +---------------------------------------------------------------------------+
 function deleteRecord($id, $tableName, $columnName){
     // Create connection
-    include_once('database/location_db.php');
+    include('database/location_db.php');
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
     if ($conn->connect_error) {
@@ -125,7 +125,7 @@ function deleteRecord($id, $tableName, $columnName){
 ## | Function to Select Location Categories                                    | 
 ## +---------------------------------------------------------------------------+
 function selectLocationCategories(){
-    include_once('database/location_db.php');
+    include('database/location_db.php');
     $query_cats = "SELECT categoryID, categoryName FROM location_categories";
     $conn_cats = new mysqli($servername, $username, $password, $dbname);
     $result_cats = $conn_cats->query($query_cats);
