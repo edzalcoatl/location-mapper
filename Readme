@@ -1,0 +1,80 @@
+# Location Mapper
+
+Location Categories
+Maintain categories with the following fields in the database:
+- title / text field
+- 1 color selection
+
+Locations
+Maintain locations with the following fields in the database:
+- Address
+- Latitude
+- Longitude
+
+Selection of a category (see above)
+
+Requirement: Latitude and longitude should be determined automatically based on the address.
+
+Output
+- Show places on a map in the form of position marks.
+- Incl. Address when clicking on a marker.
+- Different colored markers in different categories.
+
+
+## Getting Started
+
+- Extract location_maper.zip file in htdocs folder
+- Create Database location_maping 
+- Create User for database: user: location_user | password: rN2t0SoP4h1xSqtP
+- Import Example Database @ database/location_mapping.sql
+
+### Prerequisites
+
+- MySQL + Appache server. 
+- XAMPP 5.6.34 +
+
+## Running the tests
+
+- Modes Added for Lists Add, Edit, Delete.
+- Category List Added.
+- Location List Added.
+
+
+## Built With
+
+* [Bootstrap 4]
+* [PHP]
+* [JQUERY]
+* [MYSQL]
+
+
+## Versioning
+
+No Versioning Jet but it's planned to upload in a Git repository.
+
+## Authors
+
+* **Eduardo Valdez Arias** 
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+* This code was used as a small project for service & media online advertising GmbH. 
+
+## Missing Features
+
+- Choice of which categories to display
+- Create a Languaje Configuration File 
+- On Location Edit Mode Field Category is Disabled.
+- Relocation of Locations through Google Map.
+- Optimize Add/Edit/Delete Modes though a Class or More Functions.
+- Utilize a Templating Scheeme such as Laravel.
+- Location Search Box.
+- Paging on Location and Location Categories Views.
+- Enable Single Click on Menu.
+- Add Label when there are no listings, "No Location Categories Available."
+- Add an Icon.
+- Create Relationschips in DB (OK)

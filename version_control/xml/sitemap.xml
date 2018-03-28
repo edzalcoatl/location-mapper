@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<markers>
+    <marker id="15" name="Neuschwanstein Castle" address="Neuschwansteinstraße 20, 87645 Schwangau, Germany" lat="47.557574" lng="10.7498004" type="Restaurant" />
+    <marker id="13" name="Ocotal" address="Ocotal 73, Zentlapatl, 05020 Ciudad de México, CDMX, Mexico" lat="19.3442214" lng="-99.3107911" type="Restaurant" />
+    <marker id="16" name="Pergamonmuseum" address="Stauffenbergstraße 41, 10785 Berlin, Germany" lat="52.5092869" lng="13.3644977" type="Restaurant" />
+    <marker id="17" name="Museum Island" address="Museum Island, Berlin, Germany" lat="52.5169328" lng="13.4018997" type="Restaurant" />
+    <marker id="14" name="Home Kaeselow" address="Dorfstraße 37A, 19205 Lützow, Germany" lat="53.67189" lng="11.16078" type="Restaurant" />
+</markers>
