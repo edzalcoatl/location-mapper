@@ -25,9 +25,9 @@
                 echo '<div class="alert alert-danger" role="alert">'. $lang['record_error'].'</div>';
                 die();
             }
-            if($_REQUEST['delete']==1) echo '<div class="alert alert-success" role="alert">'. $lang['recod_deleted']. '</div>'; 
-            if($_REQUEST['update']==1) echo '<div class="alert alert-success" role="alert">'. $lang['recod_updated']. '</div>'; 
-            if($_REQUEST['insert']==1) echo '<div class="alert alert-success" role="alert">'. $lang['recod_inserted']. '</div>'; 
+            if($_REQUEST['delete']==1) echo '<div class="alert alert-success" role="alert">'. $lang['record_deleted']. '</div>'; 
+            if($_REQUEST['update']==1) echo '<div class="alert alert-success" role="alert">'. $lang['record_updated']. '</div>'; 
+            if($_REQUEST['insert']==1) echo '<div class="alert alert-success" role="alert">'. $lang['record_inserted']. '</div>'; 
             if($_REQUEST['delete'] || $_REQUEST['update'] || $_REQUEST['insert']) echo "<META http-equiv=\"refresh\" content=\"1;URL=locations_list_view.php\">";
             ?>
             <?php $locations_list = selectLocations(); //Get locations array?>
