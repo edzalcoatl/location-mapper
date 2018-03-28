@@ -26,7 +26,7 @@ $lang['edit'] = 'Edit';
 $lang['delete'] = 'Delete';
 $lang['record_inserted'] = 'Record Inserted Succesfully!';
 $lang['record_updated'] = 'Record Updated Succesfully!';
-$lang['recod_deleted'] ='Record Deleted Succesfully!';
+$lang['record_deleted'] ='Record Deleted Succesfully!';
 
 //location_map_view
 $lang['location_map_view_page_title'] = 'Locations Map';
