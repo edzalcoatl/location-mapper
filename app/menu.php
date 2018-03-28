@@ -33,8 +33,8 @@
                     <?= $lang['lang'];?>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="index.php?la=eng"><?= $lang['lang-eng']; ?></a>
-                    <a class="dropdown-item" href="index.php?la=fre"><?= $lang['lang-ger']; ?></a>
+                    <a class="dropdown-item" href="<?= $_SERVER['PHP_SELF'] ?>?la=eng"><?= $lang['lang-eng']; ?></a>
+                    <a class="dropdown-item" href="<?= $_SERVER['PHP_SELF'] ?>?la=ger"><?= $lang['lang-ger']; ?></a>
                 </div>
             </li>
             
